@@ -1,12 +1,25 @@
+<!-- markdownlint-disable MD041 -->
 <p align="center">
- <h2 align="center">Terraform-nomad-presto</h2>
- <p align="center">Terraform module with example</p>
- <a href="https://github.com/fredrikhgrelland/vagrant-hashistack/releases">
-   <img alt="Releases" src="https://img.shields.io/badge/dynamic/json?label=with%20vagrant-hashistack&query=%24.current_version.version&url=https%3A%2F%2Fapp.vagrantup.com%2Fapi%2Fv1%2Fbox%2Ffredrikhgrelland%2Fhashistack"/>
- </a>
+    <h2 align="center">Terraform-nomad-presto</h2>
+</p>
+<p align="center">
+    <a href="https://github.com/fredrikhgrelland/vagrant-hashistack-template" alt="Built on">
+        <img src="https://img.shields.io/badge/Built%20from%20template-Vagrant--hashistack--template-blue?style=for-the-badge&logo=github"/>
+    </a>
+    <p align="center">
+        <a href="https://github.com/fredrikhgrelland/vagrant-hashistack" alt="Built on">
+            <img src="https://img.shields.io/badge/Powered%20by%20-Vagrant--hashistack-orange?style=for-the-badge&logo=vagrant"/>
+        </a>
+    </p>
 </p>
 
-#
+---
+
+Module contains a nomad job [./conf/nomad/presto.hc](./conf/nomad/presto.hcl) with [presto sql server](https://github.com/prestosql/presto).
+
+Additional information:
+- [consul-connect](https://www.consul.io/docs/connect) integration
+- [nomad docker driver](https://www.nomadproject.io/docs/drivers/docker.html)
 
 ## Contents
 0. [Prerequisites](#prerequisites)
@@ -194,7 +207,7 @@ presto --server localhost:8080 --catalog hive --schema default --user presto --f
 
 ## License
 
-________
+---
 
 ## References
 - [Blog post](https://towardsdatascience.com/load-and-query-csv-file-in-s3-with-presto-b0d50bc773c9)
