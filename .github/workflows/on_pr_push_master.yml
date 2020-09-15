@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     strategy:
       matrix:
@@ -83,9 +83,6 @@ jobs:
           ENVKEY_nomad_enterprise: ${{ steps.hashicorp_binary.outputs.nomad_enterprise }}
           ENVKEY_vault_enterprise: ${{ steps.hashicorp_binary.outputs.vault_enterprise }}
           FILE_NAME: .env_override
-
-      - name: Run make install
-        run: make install
 
       - name: Run make test
         run: make test
