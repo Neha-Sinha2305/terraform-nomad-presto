@@ -84,6 +84,9 @@ jobs:
           ENVKEY_vault_enterprise: ${{ steps.hashicorp_binary.outputs.vault_enterprise }}
           FILE_NAME: .env_override
 
+      - name: Run make install
+        run: make install
+
       - name: Run make test
         run: make test
 
